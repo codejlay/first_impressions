@@ -1,0 +1,43 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Break points
+
+@mixin bp($point) {
+  
+  $bp-mobile: "(min-width: #{$small-screen} )";
+  $bp-tablet: "(min-width: #{$medium-screen} )";
+  $bp-desktop-1024: "(min-width: #{$large-screen-1024} )";
+  $bp-desktop-1280: "(min-width: #{$large-screen-1280} )";
+  $bp-desktop: "(min-width: #{$large-screen} )";
+  $bp-desktop-1920: "(min-width: #{$large-screen-1920} )";
+
+  @if $point == desktop-1920 {
+    @media #{$bp-desktop-1920} { @content; }
+  }
+  @if $point == desktop {
+    @media #{$bp-desktop} { @content; }
+  }
+  @if $point == desktop-1280 {
+    @media #{$bp-desktop-1280} { @content; }
+  }
+  @if $point == desktop-1024 {
+    @media #{$bp-desktop-1024} { @content; }
+  }
+  @else if $point == tablet {
+    @media #{$bp-tablet} { @content; }
+  }
+  @else if $point == mobile {
+    @media #{$bp-mobile} { @content; }
+  }
+}

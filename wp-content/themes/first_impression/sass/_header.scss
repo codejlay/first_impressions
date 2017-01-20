@@ -1,0 +1,112 @@
+// Header
+.site-logo {
+	background-color: $color-charcoal;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 4.5rem;
+	margin-bottom: 0;
+	line-height: 1;
+
+	@include bp(desktop-1024) {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+}
+
+.site-logo img {
+	max-width: 100%
+}
+
+// Navigation
+.main-navigation {
+	display: none;
+
+	@include bp(desktop-1024) {
+		display: block;
+	}
+}
+
+.menu-main-menu-container {
+	display: flex;
+	margin-top: .5rem;
+	margin-bottom: 1rem;
+}
+
+#primary-menu {
+	margin: 0 auto;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.menu-item a {
+	color: $color-charcoal;
+	font-family: museo-sans;
+	font-weight: 100;	
+}
+
+#primary-menu .current_menu_ancestor:after,
+#primary-menu .current_page_ancestor:after,
+#primary-menu .current_page_item:after,
+#primary-menu .current-menu-parent:after,
+#primary-menu .current-menu-ancestor:after {
+    margin: 0 auto;
+    content: "";
+    background-color: $color-blush;
+    display: block;
+    height: 8px;
+    width: 35px;
+}
+
+#primary-menu .menu-item-12:hover:after,
+#primary-menu .menu-item-25:hover:after,
+#primary-menu .menu-item-26:hover:after,
+#primary-menu .menu-item-27:hover:after,
+#primary-menu .menu-item-788:hover:after {
+    margin: 0 auto;
+    content: "";
+    background-color: $color-blush;
+    display: block;
+    height: 8px;
+    width: 35px;
+}
+
+#primary-menu .menu-item-35:after,
+#primary-menu .menu-item-36:after,
+#primary-menu .menu-item-37:after,
+#primary-menu .menu-item-43:after,
+#primary-menu .menu-item-42:after,
+#primary-menu .menu-item-55:after,
+#primary-menu .menu-item-54:after,
+#primary-menu .menu-item-53:after,
+#primary-menu .menu-item-52:after,
+#primary-menu .menu-item-637:after  {
+    background-color: transparent;
+}
+
+#primary-menu li {
+	padding: 1rem 3rem 0;
+}
+
+.sub-menu {
+	background-color: rgba(230,216,210, 0.8);
+	margin: 1rem 0;
+	padding-bottom: 1rem;
+}
+
+.sub-menu li a:hover {
+	color: white;
+}
+
+.main-navigation ul ul {
+	top: 2;
+}
+
+.sub-menu .sub-menu {
+	background-color: rgba(214,239,252, .8);
+}
+
+.sub-menu .sub-menu ul ul ul {
+	top: 3;
+}

@@ -54,8 +54,8 @@ wp-content/plugins/*
 # ========================================================== #
 wp-content/themes/*
 wp-content/uploads/wp-migrate-db/*
-!wp-content/themes/bell_virtual
+!wp-content/themes/first_impression
 
 # Ignore packages #
 # =============== #
-wp-content/themes/bell_virtual/node_modules/
+wp-content/themes/first_impression/node_modules/
